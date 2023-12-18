@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_drawer_layout"
+    android:background="@drawable/img_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#6F5594"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Database Tools"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp" />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:text="Enter Employee Data"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="-36dp"
+            android:layout_marginTop="265dp"
+            android:layout_toEndOf="@+id/imgView"
+            android:src="@drawable/baseline_camera_alt_24" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgView"
+            android:layout_width="171dp"
+            android:layout_height="157dp"
+            android:layout_below="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/img_1"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="4dp" />
+
+    <!--EditText for adding employee name-->
+
+        <EditText
+            android:id="@+id/idEdtEmployeeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:drawableEnd="@drawable/baseline_perm_identity_24"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/border"
+            android:hint="Enter Employee Name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/SMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/baseline_textsms_24"
+            app:fabSize="normal" />
+
+
+    <!--EditText for adding employee phone-->
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/country_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtEmployeeName"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_defaultNameCode="IND"
+        app:ccp_showFlag="true"
+        app:ccp_showFullName="false"
+        app:ccp_showNameCode="true" />
+
+    <!--EditText for adding employee address-->
+    <EditText
+        android:id="@+id/idEdtEmployeePhoneNumber"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeeName"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/border"
+        android:layout_marginEnd="30dp"
+        android:drawableEnd="@drawable/baseline_local_phone_24"
+        android:layout_toEndOf="@+id/country_code"
+        android:hint="Number"
+        android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/idEdtEmployeeAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtEmployeePhoneNumber"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/border"
+            android:hint="Enter employee address"
+            android:drawableEnd="@drawable/baseline_home_24"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/black" />
+
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnSendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="Save Data" />
+
+
+
+    <!--Button for choosing image from gallery-->
+
+    <ProgressBar
+        android:id="@+id/Progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/idEdtEmployeeAddress"
+        android:layout_margin="30dp" />
+
+        <ImageView
+            android:id="@+id/image_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_format_list_bulleted_24"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        android:background="@drawable/img_5"
+        android:id="@+id/nav_view"
+        app:menu="@menu/navigation_menu"/>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+

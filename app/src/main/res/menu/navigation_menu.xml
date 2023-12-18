@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_card"
+        android:icon="@drawable/baseline_perm_identity_24"
+        android:title="ID CARD" />
+
+    <item
+        android:id="@+id/nav_Retrieve"
+        android:icon="@drawable/baseline_cloud_download_24"
+        android:title="RETRIEVE" />
+
+    <item
+        android:id="@+id/nav_update"
+        android:icon="@drawable/baseline_update_24"
+        android:title="UPDATE" />
+
+    <item
+        android:id="@+id/nav_attendance"
+        android:icon="@drawable/baseline_add_task_24"
+        android:title="ATTENDANCE" />
+    <item
+        android:id="@+id/nav_leave"
+        android:icon="@drawable/baseline_time_to_leave_24"
+        android:title="LEAVE REQUESTS" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        android:title="LOGOUT" />
+
+</menu>

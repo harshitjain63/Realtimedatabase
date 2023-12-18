@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_6"
+        android:padding="16dp">
+
+        <!-- Your existing views go here -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/AdminImg"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_1"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="4dp" />
+
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/AdminImg"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/IMG" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Adress"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/AdminImg"
+            android:text="Starting Date:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Ending"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/Adress"
+            android:text="Ending Date:"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/Ending"
+            android:text="Contact:"
+            android:id="@+id/Contact"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/Contact"
+            android:text="Name:"
+            android:id="@+id/Name"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/Name"
+            android:text="Reason:"
+            android:id="@+id/Reason"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/RealAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:hint="Starting Date"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/AdminImg"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/Adress"
+            app:drawableRightCompat="@drawable/baseline_calendar_month_24" />
+
+        <TextView
+            android:id="@+id/RealEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:hint="Ending Date"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/RealAdress"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/Adress"
+            app:drawableRightCompat="@drawable/baseline_calendar_month_24" />
+        <TextView
+            android:id="@+id/RealContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:hint="Contact"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/RealEnd"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/Contact"
+            app:drawableRightCompat="@drawable/baseline_local_phone_24" />
+        <TextView
+            android:id="@+id/RealName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:hint="Name"
+            android:drawableRight="@drawable/baseline_perm_identity_24"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/RealContact"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/Name" />
+        <TextView
+            android:id="@+id/Realreason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:hint="Reason"
+            android:drawableEnd="@drawable/baseline_create_24"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/RealName"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/RealName" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

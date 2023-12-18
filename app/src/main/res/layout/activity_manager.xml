@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/img_5"
+    android:layout_height="match_parent"
+    tools:context=".Manager">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="#92D3DD"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leave Request"
+                android:layout_marginTop="7dp"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textStyle="bold"
+            android:text="Leave Available-14 days per year"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+
+            <EditText
+                android:id="@+id/ed1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:drawableEnd="@drawable/baseline_perm_identity_24"
+                android:layout_margin="23dp"
+                android:background="@drawable/border"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:hint="Name" />
+
+
+
+            <EditText
+                android:id="@+id/ed2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="23dp"
+                android:drawableEnd="@drawable/baseline_local_phone_24"
+                android:background="@drawable/border"
+                android:inputType="number"
+                android:hint="Phone Number"
+                android:textSize="20sp" />
+
+
+
+            <EditText
+                android:id="@+id/ed3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:drawableEnd="@drawable/baseline_calendar_month_24"
+                android:layout_margin="23dp"
+                android:background="@drawable/border"
+                android:inputType="date"
+                android:hint="Starting Date of Leave"
+                android:textSize="20dp" />
+
+
+            <EditText
+                android:id="@+id/ed4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:drawableEnd="@drawable/baseline_calendar_month_24"
+                android:layout_margin="23dp"
+                android:background="@drawable/border"
+                android:inputType="date"
+                android:hint="Ending Date of Leave"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ed5"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:ems="10"
+                android:layout_margin="23dp"
+                android:background="@drawable/border"
+                android:inputType="text"
+                android:textSize="20sp"
+                android:hint="Reason" />
+
+        <Button
+            android:id="@+id/b"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textSize="20dp"
+            android:backgroundTint="#5062C5"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

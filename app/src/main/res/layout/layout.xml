@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/img_5"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="133dp"
+            android:layout_height="132dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/img_1"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:layout_margin="5dp"
+        android:id="@+id/txt"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:text="LOGOUT ??" />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:text="YES"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="78dp"
+        android:layout_height="37dp"
+        android:text="NO"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
